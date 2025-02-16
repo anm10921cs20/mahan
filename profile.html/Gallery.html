@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Thiruvalluvar Arts and Science College Kurinjipadi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5437fcfa6f.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="text/png" href="../images/TVRSC.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: auto;
+        }
+
+        #header {
+            width: 50%;
+            margin: auto;
+        }
+
+        #color {
+            height: 40px;
+            background-color: #4B0082;
+            border: 1px solid black;
+        }
+
+        .heading {
+            color: #ffffff;
+            text-shadow: 2px 3px 3px black;
+            font-size: small;
+            text-align: center;
+            padding: 10px;
+            transition: opacity cubic-bezier(0.39, 0.575, 0.565, 1) ease-in-out;
+            opacity: 12;
+        }
+
+        .navbar-expand-lg {
+            width: 100%;
+            background-color: #4B0082;
+            height: 40px;
+            text-align: center;
+        }
+
+        .nav1 {
+            color: #ffffff;
+            width: 100%;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        .container-fluid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #navbar {
+            width: 100%;
+            margin: auto;
+            border: 1px solid black;
+        }
+
+        .navbar-nav {
+            width: 30%;
+            margin: auto;
+        }
+
+        .nav-item {
+            margin-left: 30px;
+            color: #ffffff;
+            padding: 9px;
+        }
+
+        .nav1:hover {
+            color: #ffffff;
+            border-bottom: 2px solid #ff3;
+        }
+
+        .nav1:active {
+            color: #ffffff;
+            border-bottom: 2px solid #ff3;
+        }
+
+        .nav1:focus {
+            color: #ffffff;
+            border-bottom: 1px solid #ff3;
+        }
+
+        .dropdown-item:hover {
+            background-color: #4B0082;
+            color: #ffffff;
+            border: 1px solid black;
+        }
+
+        .dropdown-item:focus {
+            color: #4B0082;
+        }
+
+        .head-img {
+            background-image: url("../images/pexels-element5-1370295.jpg");
+            height: 500px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: blur(1px);
+        }
+
+        #images {
+            text-align: left;
+            margin-left: 40px;
+            color: #ffffff;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 100px;
+        }
+
+        .breadcrumb {
+            margin-top: 150px;
+        }
+
+        .breadcrumb-item {
+            color: #ffffff;
+            font-size: 30px;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #4B0082;
+        }
+
+        #footer {
+            background-color: #4B0082;
+            height: 340px;
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 4px;
+            border-bottom: none;
+        }
+
+        #h3 {
+            color: #ffffff;
+            text-align: left;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            margin-left: 10px;
+            font-weight: 100;
+        }
+
+        #box1 {
+            width: 123%
+        }
+
+        #para {
+            color: #ffffff;
+            text-align: left;
+        }
+
+        #box2 {
+            width: 60%;
+            margin-left: 140px;
+            margin-bottom: -132px;
+        }
+
+        #arrange {
+            list-style-type: none;
+            padding: 10px;
+            text-align: left;
+        }
+
+        #align {
+            text-decoration: none;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        #align:hover {
+            color: #ff3;
+        }
+
+        #box3 {
+            width: 60%;
+            margin-left: 80px;
+        }
+
+        #box4 {
+            width: 100%;
+            margin-right: 150px;
+        }
+
+        #align1 {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #dn {
+            background-color: #662d91;
+            height: 30px;
+            width: 100%;
+            border: 1px solid black;
+            border-top: none;
+            border-radius: 4px;
+        }
+
+        h6 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 9px;
+            padding: 7px;
+            color: #ffffff;
+            text-align: end;
+        }
+
+        #container {
+            height: auto;
+            border: 0.5px solid black;
+            box-shadow: 1px 1px 10px 5px #ffffff;
+            padding: 5px;
+            width: 100%;
+            background: linear-gradient(to left,
+                    #833ab4, #fd1d1d, #fcb045);
+            border-radius: 12px;
+        }
+
+        #content {
+            margin-top: 50px;
+            border: 0.5px solid #ffffff;
+            box-shadow: 1px 1px 10px 5px #ffffff;
+            padding: 5px;
+            margin-right: 60px;
+            border-radius: 12px;
+            margin-bottom: 50px;
+        }
+
+        #img01 {
+            height: 180px;
+            width: 180px;
+            border: 1px solid #ffffff;
+            box-shadow: 1px 1px 10px 5px #ffffff;
+            margin: 23px 23px 23px 23px;
+        }
+
+        .accordion-button {
+            width: 100%;
+            background: #ffffffff;
+            color: black;
+            border: 1px solid #ffffff;
+            border-radius: 10px;
+        }
+
+        .accordion-item {
+            background: linear-gradient(to left,
+                    #833ab4, #fd1d1d);
+        }
+
+        .accordion-header {
+            border: 0.5px solid #ffffff;
+            width: 20%;
+            border-radius: 10px;
+        }
+
+        .accordion-collapse {
+            border: 1px solid #ffffff;
+            padding: 5px;
+            border-radius: 12px;
+            box-shadow: 1px 1px 10px 5px #ffffff;
+            width: 90%;
+            margin: 12px auto;
+            
+        }
+    </style>
+
+<body>
+    <!--header Inject-->
+    <div id="color">
+        <marquee class="heading" behaviour="scrol" direction="right">For over 25 years, we have been a beacon of quality
+            education, empowering thousands of students to reach their full potential.</h2>
+        </marquee>
+    </div>
+    <br>
+    <!--header img-->
+    <div id="header">
+        <img src="TVRNEW.png">
+    </div>
+    <br>
+    <br>
+    <!--Nav Bar-->
+    <div id="navbar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav1 " href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav1" href="Gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav1 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                About
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                                <li><a class="dropdown-item" href="chairman.html/chairman.html">Chairman</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav1 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="sports.html/sports.html">Sports</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav1" href="Contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav1" href="../Admission.html">Admission</a>
+                          </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <!--Head image-->
+    <div class="md head-img container-fluid">
+        <h1 id="images">Gallery</h1>
+        <br>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+            </ol>
+        </nav>
+    </div>
+    <br>
+    <div class="container text-center" id="container">
+        <div class="row">
+            <div class="col">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1 style="color: #ffffff; font-family:'Times New Roman', Times, serif; text-shadow:1px 1px #ffff; font-weight:bold; ">Our Gallery</h1>
+            </div>
+            <div class="col">
+                <div id="content">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Gallery
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <a id="a" href="../images/gallery/campus1/c1.html" target="_blank"> <img id="img01"
+                                            src="../images/gallery/campus/c1.jpg"></a>
+                                    <a id="a" href="../images/gallery/campus1/c3.html" target="_blank"> <img id="img01"
+                                            src="../images/gallery/campus/c3.jpg"></a>
+                                    <a id="a" href="../images/gallery/campus1/c4.html" target="_blank"> <img id="img01"
+                                            src="../images/gallery/campus/c4.jpg"></a>
+                                    <a id="a" href="../images/gallery/campus1/c5.html" target="_blank"> <img id="img01"
+                                            src="../images/gallery/campus/c5.jpg"></a>
+                                    <a id="a" href="../images/gallery/campus1/c6.html" target="_blank">
+                                        <img id="img01" src="../images/gallery/campus/c6.jpg"></a>
+                                    <a id="a" href="../images/gallery/campus1/c7.html" target="_blank"> <img id="img01"
+                                            src="../images/gallery/campus/c7.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Culturals
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <a id="a" href="../images/gallery/culturals 1/cu1.html" target="_blank"> <img id="img01"
+                                        src="../images/gallery/culturals/cl1.jpg"></a>
+                                <a id="a" href="../images/gallery/culturals 1/cu2.html" target="_blank"> <img id="img01"
+                                        src="../images/gallery/culturals/cl2.jpg"></a>
+                                <a id="a" href="../images/gallery/culturals 1/cu3.html" target="_blank"> <img id="img01"
+                                        src="../images/gallery/culturals/cl3.jpg"></a>
+                                <a id="a" href="../images/gallery/culturals 1/cu4.html" target="_blank"> <img id="img01"
+                                        src="../images/gallery/culturals/cl4.jpg"></a>
+                                <a id="a" href="../images/gallery/culturals 1/cu5.html" target="_blank">
+                                    <img id="img01" src="../images/gallery/culturals/cl5.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Sports
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <a id="a" href="../images/gallery/sports 1/s1.html" target="_blank"> <img id="img01"
+                                        src="../images/gallery/sports/sp1.jpg"></a>
+                                <a id="a" href="../images/gallery/sports 1/s2.html" target="_blank"> <img id="img01"
+                                        src="../images/gallery/sports/sp2.jpg"></a>
+                                <a id="a" href="../images/gallery/sports 1/s3.html" target="_blank"> <img id="img01"
+                                        src="../images/gallery/sports/sp4.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+                                    NSS
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <a id="a" href="../images/gallery/nss 1/n1.html" target="_blank"> <img id="img01"
+                                        src="../images/gallery/nss/ns4.jpg"></a>
+                                <a id="a" href="../images/gallery/nss 1/n2.html" target="_blank"> <img id="img01"
+                                        src="../images/gallery/nss/ns5.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!--Footer-->
+    <div id="footer">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <div id="box1">
+                        <br>
+                        <br>
+                        <h3 id="h3">About Us</h3>
+                        <p id="para">Thiruvalluvar Arts and Science College, established by Shri Jayaganapathy Educational Trust in 1996, was founded with the mission to provide quality educationin Kurinjipadi, a region historically underrepresented in academic development within the Cuddalore District.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="box2">
+                        <br>
+                        <br>
+                        <h3 id="h3">Useful Link</h3>
+                        <li id="arrange"> <a id="align" href="../index.html">Home</a></li>
+                        <li id="arrange"> <a id="align" href="Gallery.html">Gallery</a></li>
+                        <li id="arrange"> <a id="align" href="#">About</a></li>
+                        <li id="arrange"> <a id="align" href="#">Services</a></li>
+                        <li id="arrange"> <a id="align" href="Contact.html">Contact</a></li>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="box3">
+                        <br>
+                        <br>
+                        <h3 id="h3">Facilities</h3>
+                        <li id="arrange"> <a id="align" href="sports.html/sports.html">Sports</a></li>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="box4">
+                        <br>
+                        <br>
+                        <h3 id="h3">Contact Us</h3>
+                        <li id="arrange"> <a id="align" href="https://maps.app.goo.gl/79UmwHw2ahDTigeJ9"
+                                target="_blank"><i class="fa-solid fa-location-dot"></i> Kurinjipadi, Cuddalore
+                                Dt -
+                                607302</a></li>
+                        <li id="arrange"> <a id="align" href="+(91) 9489043008" target="_blank"><i
+                                    class="fa-solid fa-user"></i> +(91) 9489043008</a></li>
+                        <li id="arrange"> <a id="align" href="https://mail.google.com/mail/u/0/#inbox"
+                                target="_blank"><i class="fa-regular fa-envelope"></i> tvrasckji@gmail.com</a>
+                        </li>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dn">
+        <h6>© Copyright 2025 Thiruvalluvar Arts & Science College All Rights Reserved | Designed By Mahan Prince
+            Official </h6>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</head>
+
+</html>
