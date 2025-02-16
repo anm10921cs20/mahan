@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Process</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5437fcfa6f.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="text/png" href="images/TVRSC.png">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        #header {
+            width: 50%;
+            margin: auto;
+        }
+
+        #color {
+            height: 40px;
+            background-color: #0E3386;
+            border: 2px solid black;
+        }
+
+        .heading {
+            color: #ffffff;
+            text-shadow: 2px 3px 3px black;
+            font-size: small;
+            text-align: center;
+            padding: 10px;
+            transition: opacity cubic-bezier(0.39, 0.575, 0.565, 1) ease-in-out;
+            opacity: 12;
+        }
+
+        .nav {
+            width: 100%;
+            background-color: #0E3386;
+            padding: 5px;
+            height: 40px;
+            border: 2px solid black;
+        }
+
+        .nav-menu {
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+
+        }
+
+        .nav-menu>li {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .nav-menu>li>a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            padding: 0;
+            list-style-type: none;
+            width: 150px;
+            border: 1px solid black;
+            box-shadow: -2px 2px 89px -27px rgba(0, 0, 0, 0.3);
+            background-color: white;
+            position: absolute;
+            visibility: hidden;
+
+        }
+
+        .dropdown a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+
+        .dropdown a:hover {
+            color: #fff;
+            background-color: #0E3386;
+        }
+
+        .has-in:hover>.dropdown {
+            visibility: visible;
+            border-top: #fff;
+        }
+
+        .drop-menu {
+            left: 150px;
+            top: 0;
+        }
+
+        .has-in {
+            position: relative;
+        }
+
+        .nav-menu>li:hover {
+            color: #fff;
+            border-top: 2px solid #fff;
+        }
+
+        .fa-greater-than {
+            margin-left: 80px;
+            font-size: 6px;
+        }
+
+        .fa-caret-down {
+            margin-left: 5px;
+            font-size: 11px;
+        }
+
+        #images-head {
+            background-image: url(images/thomas-lefebvre-gp8BLyaTaA0-unsplash.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 500px;
+            border: 1px solid black;
+
+        }
+
+        #h1 {
+            text-align: center;
+        }
+
+        #header1 {
+            color: #EF0107;
+            text-align: left;
+            font-size: 20px;
+        }
+
+        #ap,
+        #e,
+        #form {
+            padding: 15px;
+            width: 98%;
+            margin: auto;
+            line-height: 27px;
+            border: 1px solid #b3b3b2;
+            box-shadow: -2px 2px 12px 5px #b3b3b3;
+            border-radius: 5px;
+        }
+
+        #ap>li {
+            list-style-type: none;
+        }
+
+        #ap>li>a {
+            color: #EF0107;
+            text-decoration: none;
+        }
+
+        table {
+            padding: 7px;
+            width: 100%;
+        }
+
+        tr {
+            border: 1px solid #b3b3b3;
+            box-shadow: -2px 2px 40px 5px #ffffff;
+            padding: 10px;
+            height: 60px;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        #t1 {
+            background-color: #EF0107;
+            color: #ffffff;
+        }
+
+        .table {
+            padding: 7px;
+        }
+
+        #footer {
+            background-color: #4B0082;
+            height: 340px;
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 4px;
+            border-bottom: none;
+        }
+
+        #h3 {
+            color: #ffffff;
+            text-align: left;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            margin-left: 10px;
+            font-weight: 100;
+        }
+
+        #box1 {
+            width: 123%
+        }
+
+        #para {
+            color: #ffffff;
+            text-align: left;
+        }
+
+        #box2 {
+            width: 60%;
+            margin-left: 140px;
+            margin-bottom: -132px;
+        }
+
+        #arrange {
+            list-style-type: none;
+            padding: 10px;
+            text-align: left;
+        }
+
+        #align {
+            text-decoration: none;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        #align:hover {
+            color: #ff3;
+        }
+
+        #box3 {
+            width: 60%;
+            margin-left: 80px;
+        }
+
+        #box4 {
+            width: 100%;
+            margin-right: 150px;
+        }
+
+        #align1 {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #dn {
+            background-color: #662d91;
+            height: 30px;
+            width: 100%;
+            border: 1px solid black;
+            border-top: none;
+            border-radius: 4px;
+        }
+
+        h6 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 9px;
+            padding: 7px;
+            color: #ffffff;
+            text-align: end;
+        }
+
+        label {
+            padding: 10px;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            border: 1px solid #b3b3b3;
+            box-shadow: -2px 2px 40px 5px #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            width: 100%;
+        }
+
+        legend {
+            text-align: center;
+        }
+
+        #name,
+        #email {
+            border: 1px solid black;
+            border-radius: 12px;
+        }
+
+        input {
+            margin-left: 30px;
+        }
+
+        option {
+            border: 1px solid black;
+            border-radius: 12px;
+            height: 20px;
+            overflow-x: scroll;
+        }
+
+        #submit {
+            padding: 5px;
+            background-color: #007FFF;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--header Inject-->
+    <div id="color">
+        <marquee class="heading" behaviour="scrol" direction="right">For over 25 years, we have been a beacon of quality
+            education, empowering thousands of students to reach their full potential.</h2>
+        </marquee>
+    </div>
+    <br>
+    <!--header img-->
+    <div id="header">
+        <img src="images/TVRNEW.png">
+    </div>
+    <br>
+    <br>
+    <div class="nav justify-content-center">
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="has-in"><a href="#">Course <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="dropdown">
+                    <li class="has-in"><a href="#">UG <i class="fa-duotone fa-solid fa-greater-than"></i></a>
+                        <ul class="dropdown drop-menu">
+                            <li><a href="#">BA Tamil</a></li>
+                            <li><a href="#">BA English</a></li>
+                            <li><a href="#">Bcom</a></li>
+                            <li><a href="#">BSC Maths</a></li>
+                            <li><a href="#">BBA</a></li>
+                            <li><a href="#">Bcom CA</a></li>
+                            <li><a href="#">BSC Computer Science</a></li>
+                            <li><a href="#">BCA</a></li>
+                            <li><a href="#">BSC Physics</a></li>
+                            <li><a href="#">BSC Micro Biology</a></li>
+                            <li><a href="#">BSC Bio Chemistry</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-in"><a href="#">PG <i class="fa-duotone fa-solid fa-greater-than"></i></a>
+                        <ul class="dropdown drop-menu">
+                            <li><a href="#">MA Tamil</a></li>
+                            <li><a href="#">MA English</a></li>
+                            <li><a href="#">Mcom</a></li>
+                            <li><a href="#">MSC Maths</a></li>
+                            <li><a href="#">MSC CS</a></li>
+                            <li><a href="#">MSC MB</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+            <li><a href="profile.html/Gallery.html">Gallery</a></li>
+            <li class="has-in"><a href="#">About <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="dropdown ">
+                    <li><a href="profile.html/profile.html">Profile</a></li>
+                    <li><a href="profile.html/chairman.html/chairman.html">Chairman</a></li>
+                </ul>
+            </li>
+            <li class="has-in"><a href="#">Services <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="dropdown ">
+                    <li><a href="profile.html/sports.html/sports.html">Sports</a></li>
+                </ul>
+            </li>
+            <li><a href="profile.html/Contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <div id="images-head">
+    </div>
+    <br>
+    <br>
+    <h1 id="h1">Application Process</h1>
+    <br>
+    <div id="ap">
+        <h2 id="header1">
+            Application Fees
+        </h2>
+        <p id="para1">
+            Application form for admission is available on payment of Rs.100/- for UG course and Rs.150/- for the PG
+            course at the college office. The application will be issued in person only. (The Application fee is likely
+            to be changed at the time admission)
+        </p>
+        <br>
+        <h2 id="header1">
+            Mode of Applying
+        </h2>
+        <p id="para">
+            The students can apply online by clicking Apply Online. Students can also fill the Application by
+            downloading it from the below Link and submit to Office.
+        </p>
+        <li><a href="#"> UG Application</a></li>
+        <li><a href="#"> PG Application</a></li>
+        <br>
+        <p id="para1">
+            Filled in application should reach the Principal within 10 days from the Date of publication of +2 results.
+            Late applications will be considered only after exhausting applications received in time. Separate
+            Application should be filled in for the different choices of subject/faculty.
+        </p>
+        <br>
+        <h2 id="header1">
+            Enclosures
+        </h2>
+        <p id="para1">
+            The following items shall be enclosed with the application form:
+        </p>
+        <li>(i) Copy of the Community Certificate issued by Revenue Officer, in respect of BC/MBC/SC/ST candidates</li>
+        <li>(ii) Self addressed post card.</li>
+        <li>(iii) Passport size photos(3 Copies)</li>
+    </div>
+    <br>
+    <h1 id="h1">Eligibility</h1>
+    <br>
+    <div id="e">
+        <h2 id="header1">Eligibility -- UG Course</h2>
+        <br>
+        <table class="justify-content-center">
+            <tr id="t1">
+                <td>Course</td>
+                <td>Matching Criteria</td>
+            </tr>
+            <tr>
+                <td>B.A. Tamil</td>
+                <td>A Pass in HSC level Tamil as a subject</td>
+            </tr>
+            <tr>
+                <td>B.A. English</td>
+                <td>A Pass in HSC level English as a subject.</td>
+            </tr>
+            <tr>
+                <td>B.B.A.</td>
+                <td>A pass in HSC level with Commerce and Accountancy as a subjects.</td>
+            </tr>
+            <tr>
+                <td>B.Com Commerce</td>
+                <td> A pass in HSC level with Commerce and Accountancy as a subjects. </td>
+            </tr>
+            <tr>
+                <td>B.Com CA</td>
+                <td>A pass in HSC level with Mathematics / Commerce / Computer Science as one of the subjects.</td>
+            </tr>
+            <tr>
+                <td>B.Sc. Computer Science</td>
+                <td>A pass in HSC level with Mathematics as a subject.</td>
+            </tr>
+            <tr>
+                <td>BCA</td>
+                <td>A pass in HSC level with Mathematics as a subject.</td>
+            </tr>
+            <tr>
+                <td>B.Sc. Biochemistry</td>
+                <td>A pass in HSC level with Chemistry and Biochemistry / Botany / Biology and Zoology as subjects.</td>
+            </tr>
+            <tr>
+                <td>B.Sc. Mathematics</td>
+                <td>A pass in HSC level with Mathematics and Physics / Chemistry as one of the subjects.</td>
+            </tr>
+            <tr>
+                <td>B.Sc. Chemistry</td>
+                <td>A pass in HSC level with Mathematics and Physics / Chemistry as one of the subjects.</td>
+            </tr>
+            <tr>
+                <td>B.Sc. Physics</td>
+                <td>A pass in HSC level with Mathematics and Physics / Chemistry as one of the subjects</td>
+            </tr>
+            <tr>
+                <td>B.Sc. Microbiology</td>
+                <td>A pass in HSC level with Botany/Biology and Zoology</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <h2 id="header1">Eligibility -- PG Course</h2>
+        <br>
+        <table class="justify-content-center table ">
+            <tr id="t1">
+                <td>Course</td>
+                <td>Matching Criteria</td>
+            </tr>
+            <tr>
+                <td>M.A. English</td>
+                <td>B.A. English/B.A and B.Sc. with Part II English or B.Com. /B.B.A /B.C.A./ B.C.S. and such Degree
+                    with one year Part II English.</td>
+            </tr>
+            <tr>
+                <td>M.Com Commerce</td>
+                <td> B.Com/B.Com (Corporate Secretaryship)/B.C.S.,B.B.A /B.Com. (Bank Management)/B.A.
+                    (Co-operation)/B.A.(Economics)/B.A.(Corporate Economics) and B.Sc Mathematics or B.Sc (Computer
+                    Science) or B.C.A or B.Sc. (ISM) with any two core Papers offered at the B.Com. level.</td>
+            </tr>
+            <tr>
+                <td>M.Sc. Computer Science</td>
+                <td>B.Sc Degree in Computer Science / Computer Science and Technology</td>
+            </tr>
+            <tr>
+                <td>M.Sc. Mathematics</td>
+                <td>B.Sc degree in Mathematics</td>
+            </tr>
+            <tr>
+                <td>M.Sc. Microbiology</td>
+                <td>B.Sc Degree in Microbiology /Applied Microbiology /Industrial Microbiology / Botany / Plant Science
+                    / Plant Biology and Plant Zoology /Animal Science / Applied Animal Science and Animal Biotechnology
+                    / Biochemistry / Biotechnology / Bioinformatics / Biology / Life Science / Home Science /Nutrition
+                    and Diabetics/ BSMS / BAMS/ BUMS/Chemistry with Biotany /Zoology as Allied Subjects.</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <br>
+    <h1 id="h1">Admission Online Registration</h1>
+    <br>
+
+    <div id="form" class="form-group">
+
+        <figcaption>
+            <legend>Admission Online Registration</legend>
+            <br>
+            <br>
+            <form>
+                <label>Name</label>
+                <input type="text" id="name" value="">
+                <br>
+                <br>
+                <label>Mobile</label>
+                <input type="number" id="mobile" value="">
+                <br>
+                <br>
+                <label>Email</label>
+                <input type="email" id="email" value="">
+                <br>
+                <br>
+                <label>Gender</label>
+                <input type="radio" id="male" name="gender" value="Male" checked="checked" >Male
+                <input type="radio" id="female" name="gender" value="Female">Female
+                <br>
+                <br>
+                <label>Course</label>
+                <select id="select">
+                    <option>Which Course</option>
+                    <option id="cou" value="BA Tamil ">BA Tamil</option>
+                    <option id="cou" value="BA English">BA English </option>
+                    <option id="cou" value="BBA">BBA </option>
+                    <option id="cou" value="BCOM">BCOM </option>
+                    <option id="cou" value="BCOM CA">BCOM CA </option>
+                    <option id="cou" value="BSC Bio Chemistry">BSC Bio Chemistry </option>
+                    <option id="cou" value="BSC Micro Biology">BSC Micro Biology</option>
+                    <option id="cou" value="BCA">BCA </option>
+                    <option id="cou" value="BSC">BSC Computer Science </option>
+                    <option id="cou" value="BSC">BSC Physics </option>
+                    <option id="cou" value="BSC">BSC Maths </option>
+                    <option id="cou" value="BSC">BSC Chemistry </option>
+                    <option id="cou" value="MA ">MA Tamil </option>
+                    <option id="cou" value="Ma ">Ma English </option>
+                    <option id="cou" value="MCO">MCOM</option>
+                    <option id="cou" value="MSC">MSC Computer Science</option>
+                    <option id="cou" value="MSC">MSC Micro Biology</option>
+                    <option id="cou" value="MSC">MSC Maths</option>
+                </select>
+                <br>
+                <br>
+                <input type="submit" id="submit"  onclick="clickOn()" value="Register">
+                <br>
+                <br>
+            </form>
+        </figcaption>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!--Footer-->
+    <div id="footer">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <div id="box1">
+                        <br>
+                        <br>
+                        <h3 id="h3">About Us</h3>
+                        <p id="para">Thiruvalluvar Arts and Science College, established by Shri Jayaganapathy
+                            Educational Trust in 1996, was founded with the mission to provide quality education in
+                            Kurinjipadi, a region historically underrepresented in academic development within the
+                            Cuddalore District.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="box2">
+                        <br>
+                        <br>
+                        <h3 id="h3">Useful Link</h3>
+                        <li id="arrange"> <a id="align" href="../index.html">Home</a></li>
+                        <li id="arrange"> <a id="align" href="Gallery.html">Gallery</a></li>
+                        <li id="arrange"> <a id="align" href="#">About</a></li>
+                        <li id="arrange"> <a id="align" href="#">Services</a></li>
+                        <li id="arrange"> <a id="align" href="Contact.html">Contact</a></li>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="box3">
+                        <br>
+                        <br>
+                        <h3 id="h3">Facilities</h3>
+                        <li id="arrange"> <a id="align" href="sports.html/sports.html">Sports</a></li>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="box4">
+                        <br>
+                        <br>
+                        <h3 id="h3">Contact Us</h3>
+                        <li id="arrange"> <a id="align" href="https://maps.app.goo.gl/79UmwHw2ahDTigeJ9"
+                                target="_blank"><i class="fa-solid fa-location-dot"></i> Kurinjipadi, Cuddalore Dt -
+                                607302</a></li>
+                        <li id="arrange"> <a id="align" href="+(91) 9489043008" target="_blank"><i
+                                    class="fa-solid fa-user"></i> +(91) 9489043008</a></li>
+                        <li id="arrange"> <a id="align" href="https://mail.google.com/mail/u/0/#inbox"
+                                target="_blank"><i class="fa-regular fa-envelope"></i> tvrasckji@gmail.com</a></li>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dn">
+        <h6>© Copyright 2025 Thiruvalluvar Arts & Science College All Rights Reserved | Designed By Mahan Prince
+            Official </h6>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+<script src="ascript.js" lang="javascript">
+
+</script>
+
+</html>
